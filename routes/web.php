@@ -11,12 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 
-Route::get('index',[
+Route::get('/',[
     'as'=>'trang-chu',
     'uses'=>'giaodiencontroller@getindex'
 ]);
@@ -85,3 +85,7 @@ Route::get('dangky',[
 
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -7,6 +7,9 @@ use App\ProductType;
 use App\Product;
 class loaisanphamcontroller extends Controller
 {
+    public function __construct(){
+        $this->middleware('admin');
+    }
     public function getdanhsach(){
         $loaisanpham = ProductType::all();
         return view('admin.loaisanpham.danhsach',['loaisanpham'=>$loaisanpham]);

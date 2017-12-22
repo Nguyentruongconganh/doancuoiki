@@ -66,7 +66,7 @@
 													<!--quantity-->
 									</div>
 									<div class="women">
-										<a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
+										<a href="{{route('them-vao-gio-hang',$sanpham->id)}}" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
 									</div>
 									<div class="social-icon">
 										<a href="#"><i class="icon"></i></a>
@@ -152,7 +152,7 @@
 								<div class="grid-arr">
 									<div  class="grid-arrival">
 										<figure>		
-											<a href="{{route('loai_san_pham','$sp->id')}}">
+											<a href="{{route('loai-san-pham',$sp->id)}}">
 												<div class="grid-img">
 													<img  src="sourch/image/product/{{$sp->image}}" class="img-responsive" alt="">
 												</div>
@@ -174,7 +174,7 @@
 									<div class="women">
 										<h6><a href="single.html">{{$sp->name}}</a></h6>
 										<p ><del>$100.00</del><em class="item_price">$70.00</em></p>
-										<a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
+										<a href="{{route('them-vao-gio-hang',$sp->id)}}" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
 									</div>
 								</div>
 							</div>

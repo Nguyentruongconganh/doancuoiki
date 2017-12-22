@@ -36,6 +36,25 @@ Route::get('lienhesanpham',[
     'uses'=>'giaodiencontroller@getlienhesanpham'
 ]);
 
+Route::get('giohang',[
+    'as'=>'check-out',
+    'uses'=>'giaodiencontroller@getgiohang'
+]);
+
+Route::get('giohang/xoa-gio-hang',[
+    'as'=>'empty-cart',
+    'uses'=>'giaodiencontroller@xoagiohang'
+]);
+
+Route::get('giohang/them-gio-hang/{id}',[
+    'as'=>'them-vao-gio-hang',
+    'uses'=>'giaodiencontroller@themgiohang'
+]);
+
+Route::get('giohang/xoa-khoi-gio-hang/{id}',[
+    'as'=>'giam-dan-gio-hang',
+    'uses'=>'giaodiencontroller@xoatungsanpham'
+]);
 
 
 //admin
@@ -88,4 +107,4 @@ Route::get('dangky',[
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');

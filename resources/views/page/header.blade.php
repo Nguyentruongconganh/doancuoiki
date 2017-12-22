@@ -4,31 +4,54 @@
 				<div class="top-left">
 				<a href="#"> Help  <i class="glyphicon glyphicon-phone" aria-hidden="true"></i> +0123-456-789</a>
 			</div>
-			<div class="top-right">
-			<ul>
-				@if (Auth::guest())
-					<li><a href="{{ route('login') }}">Dang Nhap</a></li>
-					<li><a href="{{ route('register') }}">Dang Ky</a></li>
-				@else
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-							{{ Auth::user()->name }}
-						</a>
-					</li>
-					<li>
+	
+			<ul class="nav navbar-top-links navbar-right">
+				<!-- /.dropdown -->
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+						<i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+					</a>
+					<ul class="dropdown-menu dropdown-user">
+						<!-- <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                		</li>
+                		<li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                		</li>
+                		<li class="divider"></li>
+                		<li><a href=""><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+						</li> -->
+						@if (Auth::guest())
+							<li><a href="{{ route('login') }}">Dang Nhap</a></li>
+							<li><a href="{{ route('register') }}">Dang Ky</a></li>
+						@else
+						
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+									{{ Auth::user()->name }}
+								</a>
+							</li>
+							<li><a href="admin/sanpham/danhsach"> Admin</a>
+                			</li>
+							<li>
 								<a href="{{ route('logout') }}"
 									onclick="event.preventDefault();
 												document.getElementById('logout-form').submit();">
 									Dang Xuat
+								
 								</a>
 
 								<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
 									{{ csrf_field() }}
 								</form>
-					</li>
-				@endif
+							</li>
+				
+
+						@endif
+					</ul>
+					<!-- /.dropdown-user -->
+				</li>
+		<!-- /.dropdown -->
 			</ul>
-			</div>
+			
 			<div class="clearfix"></div>
 		</div>
 	</div>
@@ -88,16 +111,23 @@
 				</div>
 				<div class="header-right2">
 					<div class="cart box_1">
-						<a href="checkout.html">
-							<h3> <div class="total">
-								<span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</div>
+						<a href="{{route('check-out')}}">
+							<h3>
+								<div class="total">
+								@if(Session::has('cart'))
+									<span>${{Session::get('cart')->totalPrice}}</span> (<span>{{Session::get('cart')->totalQty}}</span> items)
+								@else
+									<span class="simpleCart_total">$0.00</span> (<span id="simpleCart_quantity" class="simpleCart_quantity">0</span> items)
+								@endif
+								</div>
 								<img src="sourch/images/bag.png" alt="" />
 							</h3>
 						</a>
-						<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
+						<p><a href="{{route('empty-cart')}}" class="simpleCart_empty">Empty Cart</a></p>
 						<div class="clearfix"> </div>
-					</div>	
-				</div>
+					</div>
+
+					<div class="a"> x</div>
 				<div class="clearfix"> </div>
 			</div>
 		</div>

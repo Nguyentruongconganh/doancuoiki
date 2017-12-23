@@ -21,11 +21,11 @@
                             <div class="cart-item-info">
                             <h3><a href="{{route('chi-tiet-san-pham',$item['item']->id)}}">{{$item['item']->name}}</a></h3>
                             <ul class="qty">
-                                <li><p>Quantity: {{$item['qty']}}</p></li>
-                                <li><p>FREE delivery</p></li>
+                                <li><p>Số Lượng: {{$item['qty']}}</p></li>
+                                <li><p>Miễn Phí Giao Hàng</p></li>
                             </ul>
                                     <div class="delivery">
-                                    <p>Price: {{$item['item']->promotion_price == 0 ?$item['item']->unit_price:$item['item']->promotion_price}}</p>
+                                    <p>Gía: {{$item['item']->promotion_price == 0 ?$item['item']->unit_price:$item['item']->promotion_price}}</p>
                                     <div class="clearfix"></div>
                             </div>	
                             </div>

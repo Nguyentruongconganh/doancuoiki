@@ -10,6 +10,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <head>
 
 <title>New Shop a E-Commerce Online Shopping Category Flat Bootstrap Responsive Website Template | Single :: w3layouts</title>
+
 <!--css-->
 <base href="{{ asset(' ') }}" >
 <link href="admin_asset/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -51,6 +52,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   <script defer src="sourch/js/jquery.flexslider.js"></script>
 <link rel="stylesheet" href="sourch/css/flexslider.css" type="text/css" media="screen" />
 <script src="sourch/js/imagezoom.js"></script>
+
+
 <script>
 // Can also be used with $(document).ready()
 $(window).load(function() {
@@ -101,7 +104,15 @@ $(window).load(function() {
 		});
 		});
 	</script>
-
+<!--đơn đặt hang-->
+<link href='http://fonts.googleapis.com/css?family=Dosis:300,400' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+<!-- <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css"> -->
+<link rel="stylesheet" href="assets/dest/css/font-awesome.min.css">
+<link rel="stylesheet" href="assets/dest/vendors/colorbox/example3/colorbox.css">
+<link rel="stylesheet" title="style" href="assets/dest/css/style.css">
+<link rel="stylesheet" href="assets/dest/css/animate.css">
+<link rel="stylesheet" title="style" href="assets/dest/css/huong-style.css">
 </head>
 <body>
 		@include('page.header')

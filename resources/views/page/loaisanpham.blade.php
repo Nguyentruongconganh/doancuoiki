@@ -70,7 +70,7 @@
 													@endif
 
 												</p>
-												<a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
+												<a href="{{route('them-vao-gio-hang',$sp->id)}}" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
 											</div>
 										</div>
 									</div>
@@ -118,7 +118,7 @@
 														<em class="item_price">{{$sp->promotion_price}}</em>
 													@endif
 											</p>
-											<a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
+											<a href="{{route('them-vao-gio-hang',$sp->id)}}" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
 										</div>
 									</div>
 								@endforeach

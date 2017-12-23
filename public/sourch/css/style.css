@@ -219,8 +219,8 @@ ul.multi-column-dropdown h6 {
 .cd-header-buttons {
     position: absolute;
     display: inline-block;
-    top: 72px;
-    right: 22%;
+    top: 80px;
+    right:10%;
 }
 .cd-header-buttons li {
 	display: inline-block;

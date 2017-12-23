@@ -56,6 +56,16 @@ Route::get('giohang/xoa-khoi-gio-hang/{id}',[
     'uses'=>'giaodiencontroller@xoatungsanpham'
 ]);
 
+Route::get('dathang',[
+    'as'=>'dat-hang',
+    'uses'=>'giaodiencontroller@getdathang'
+]);
+
+Route::post('dathang',[
+    'as'=>'dat-hang',
+    'uses'=>'giaodiencontroller@postdathang'
+]);
+
 
 //admin
 Route::group(['prefix'=>'admin'],function(){

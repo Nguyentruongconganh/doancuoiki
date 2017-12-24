@@ -14,19 +14,37 @@
 								<div class="col-md-3 footer-grid">
 									<h4>My Account</h4>
 									<ul>
-										<li><a href="checkout.html">Checkout</a></li>
-										<li><a href="login.html">Login</a></li>
-										<li><a href="registered.html"> Create Account </a></li>
+										@if (Auth::guest())
+											<li><a href="{{ route('login') }}">Dang Nhap</a></li>
+											<li><a href="{{ route('register') }}">Dang Ky</a></li>
+										@else
+									
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+													{{ Auth::user()->name }}
+												</a>
+											</li>
+											<li>
+												<a href="{{ route('logout') }}"
+													onclick="event.preventDefault();
+																document.getElementById('logout-form').submit();">
+													Dang Xuat
+												</a>
+				
+												<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+													{{ csrf_field() }}
+												</form>
+											</li>
+											<li><a href="admin/danhsach/sanpham">PhanQuyen</a></li>
+										@endif
 									</ul>
 								</div>
 								<div class="col-md-3 footer-grid">
 									<h4>Information</h4>
 									<ul>
-										<li><a href="index.html">Home</a></li>
-										<li><a href="products.html">Products</a></li>
-										<li><a href="codes.html">Short Codes</a></li>
-										<li><a href="mail.html">Mail Us</a></li>
-										<li><a href="products1.html">products1</a></li>
+										<li><a href="{{route('trang-chu')}}">Trang Chủ</a></li>
+										<li><a href="{{route('loai-san-pham',1)}}">Loại Sản Phẩm</a></li>
+								
 									</ul>
 								</div>
 								<div class="col-md-3 footer-grid foot">

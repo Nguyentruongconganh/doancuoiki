@@ -104,10 +104,11 @@
 						<li><a class="cd-search-trigger" href="#cd-search"> <span></span></a></li>
 					</ul> <!-- cd-header-buttons -->
 					<div id="cd-search" class="cd-search">
-						<form action="#" method="post">
-							<input name="Search" type="search" placeholder="Search...">
+						<form action="{{route('search')}}" method="get">
+							
+							<input name="key" type="search" placeholder="Search...">
 						</form>
-					</div>	
+					</div>		
 				</div>
 				<div class="header-right2">
 					<div class="cart box_1">

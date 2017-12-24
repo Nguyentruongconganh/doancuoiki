@@ -37,5 +37,11 @@
                     <h3>Total: {{Session('cart')->totalPrice}}</h3>
                 @endif
         </div>
+        <div class="cart-items">
+         <form action="{{route('dat-hang')}}">
+            <div class="text-center"><button type = "submit" class="beta-btn primary" href="#">Đặt hàng <i class="fa fa-chevron-right"></i></button></div>
+        </form>
+           
+        </div>
 </div>
 @endsection

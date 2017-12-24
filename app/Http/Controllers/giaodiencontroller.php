@@ -122,5 +122,11 @@ class giaodiencontroller extends Controller
         
 
     }
+    public function getsearch(Request $rep)
+    {
+        $product = Product::where('name','like','%'.$rep->key.'%')->orwhere('unit_price',$rep->key)->paginate(4);
+        return view('page.timkiem',compact('product'));
+
+    }
    
 }

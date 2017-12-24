@@ -118,3 +118,7 @@ Route::get('dangky',[
 Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
+Route::get('search',[
+    'as'=>'search',
+    'uses'=>'giaodiencontroller@getsearch'
+]);

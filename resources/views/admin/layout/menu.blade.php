@@ -57,6 +57,9 @@
                                 <li>
                                     <a href="admin/user/danhsach">List User</a>
                                 </li>
+                                <li>
+                                    <a href="admin/user/them">Thêm</a>
+                                </li>
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>

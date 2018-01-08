@@ -2,7 +2,7 @@
 	<div class="header-top">
 		<div class="container">
 				<div class="top-left">
-				<a href="#"> Help  <i class="glyphicon glyphicon-phone" aria-hidden="true"></i> +0123-456-789</a>
+				<a href="#"> Help  <i class="glyphicon glyphicon-phone" aria-hidden="true"></i> +0167 640 1524</a>
 			</div>
 	
 			<ul class="nav navbar-top-links navbar-right">
@@ -92,9 +92,7 @@
 									</div>
 								</ul>
 							</li>
-							
-							<li><a href="codes.html">Chưa biết</a></li>
-							<li><a href="mail.html">Liên Hệ</a></li>
+							<li><a href="{{route('lien-he')}}">Liên Hệ</a></li>
 						</ul>
 					</div>
 					</nav>
@@ -128,7 +126,7 @@
 						<div class="clearfix"> </div>
 					</div>
 
-					<div class="a"> x</div>
+					
 				<div class="clearfix"> </div>
 			</div>
 		</div>

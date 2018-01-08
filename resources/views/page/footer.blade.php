@@ -50,9 +50,9 @@
 								<div class="col-md-3 footer-grid foot">
 									<h4>Contacts</h4>
 									<ul>
-										<li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i><a href="#">E Comertown Rd, Westby, USA</a></li>
-										<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i><a href="#">1 599-033-5036</a></li>
-										<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:example@mail.com"> example@mail.com</a></li>
+										<li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i><a href="https://www.google.com/maps/place/86+Tr%E1%BA%A7n+H%C6%B0ng+%C4%90%E1%BA%A1o,+Ph%E1%BA%A1m+Ng%C5%A9+L%C3%A3o,+Qu%E1%BA%ADn+1,+H%E1%BB%93+Ch%C3%AD+Minh,+Vi%E1%BB%87t+Nam/@10.7669982,106.6986684,13.18z/data=!4m5!3m4!1s0x31752f167372a5db:0xcedad4a6126f8f6c!8m2!3d10.766243!4d106.693523">286/2a Trần Hưng Đạo,Nguyễn Cư Trinh,Quận 1,Hồ Chí Minh</a></li>
+										<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i><a href="#">0167 640 1524</a></li>
+										<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:example@mail.com"> nguyentruongconganh1997@mail.com</a></li>
 										
 									</ul>
 								</div>
@@ -62,16 +62,6 @@
 						</div>
 </div>
 
-<div class="copy-section">
-						<div class="container">
-							<div class="copy-left">
-								<p>&copy; 2016 New Shop . All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
-							</div>
-							<div class="copy-right">
-								<img src="sourch/images/card.png" alt=""/>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-					</div>
+
 				<!--copy-->
 <div class="modal fade" id="myModal1" tabindex="-1" role="dialog">

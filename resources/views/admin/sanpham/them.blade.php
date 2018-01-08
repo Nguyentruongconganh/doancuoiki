@@ -42,7 +42,7 @@
                             
                             <div class="form-group">
                                 <label>Miêu tả</label>
-                                <textarea id="demo" name="description" class="form-control ckeditor" rows="3"></textarea>
+                                <textarea id="demo" name="description" class="form-control" rows="3"></textarea>
                             </div>
 
                             <div class="form-group">

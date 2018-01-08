@@ -21,6 +21,12 @@ Route::get('/',[
     'uses'=>'giaodiencontroller@getindex'
 ]);
 
+Route::get('lienhe',[
+    'as'=>'lien-he',
+    'uses'=>'giaodiencontroller@getlienhe'
+]);
+
+
 Route::get('loaisanpham/{type}',[
     'as'=>'loai-san-pham',
     'uses'=>'giaodiencontroller@getloaisanpham'
@@ -31,10 +37,10 @@ Route::get('chitietsanpham/{id}',[
     'uses'=>'giaodiencontroller@getchitietsanpham'
 ]);
 
-Route::get('lienhesanpham',[
-    'as'=>'lien-he-san-pham',
-    'uses'=>'giaodiencontroller@getlienhesanpham'
-]);
+// Route::get('lienhesanpham',[
+//     'as'=>'lien-he-san-pham',
+//     'uses'=>'giaodiencontroller@getlienhesanpham'
+// ]);
 
 Route::get('giohang',[
     'as'=>'check-out',
@@ -96,19 +102,16 @@ Route::group(['prefix'=>'admin'],function(){
         Route::get('them','slidecontroller@getthem');
         Route::post('them','slidecontroller@postthem');
     });
+
+    Route::group(['prefix'=>'user'],function(){
+        Route::get('danhsach','usercontroller@getdanhsach');
+        Route::get('sua/{id}','usercontroller@getsua');
+        Route::post('sua/{id}','usercontroller@postsua');
+        Route::get('xoa/{id}','usercontroller@getxoa');
+    });
 });
 
 //dang nhap dang ky
-Route::get('dangnhap',[
-    'as'=>'dang-nhap',
-    'uses'=>'giaodiencontroller@getdangnhap'
-]);
-
-
-Route::get('dangky',[
-    'as'=>'dang-ky',
-    'uses'=>'giaodiencontroller@getdangky'
-]);
 
 
 

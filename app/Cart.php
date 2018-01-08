@@ -14,6 +14,33 @@ class Cart
 			$this->totalPrice = $oldCart->totalPrice;
 		}
 	}
+
+	/*
+
+	cart = {
+		items = 
+		[
+			1 = [2,3000,item],
+
+			2 = [1,6000,item],
+		],
+		totalQty = 3,
+		totalPrice = 9000
+
+	}
+
+	Session('cart')->totalQty = tong so luong
+	Session('cart')->totalPrice = tong tien
+	danhsachgiohang = Session('cart')->items = danh sach chi tiet hoa don
+	danhsachgiohang[0]->qty = 2,
+	danhsachgiohang[0]->price = 3000,
+	danhsachgiohang[0]->item->id = lay id,
+	danhsachgiohang[0]->item->name = lay ten,
+
+	*/
+
+
+
 	public function add($item, $id){
 		$realprice = $item->promotion_price == 0 ? $item->unit_price: $item->promotion_price;
 		$giohang = ['qty'=> 0, 'price' => $realprice, 'item' => $item];

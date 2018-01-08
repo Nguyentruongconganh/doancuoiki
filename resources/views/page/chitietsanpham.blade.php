@@ -80,59 +80,31 @@
 						</div>
 						<div class="col-md-3 single-grid1">
 							<h3>Sản Phẩm Tương Tự</h3>
-							<div class="recent-grids">
-								<div class="recent-left">
-									<a href="single.html"><img class="img-responsive " src="sourch/images/r.jpg" alt=""></a>	
-								</div>
-								<div class="recent-right">
-									<h6 class="best2"><a href="single.html">Lorem ipsum dolor </a></h6>
-									<div class="block">
-										<div class="starbox small ghosting"> </div>
+							@foreach($sp_tuongtu as $sp)
+								<div class="recent-grids">
+								
+									<div class="recent-left">
+										<a href="{{route('chi-tiet-san-pham',$sp->id)}}"><img class="img-responsive " src="sourch/image/product/{{$sp->image}}" alt=""></a>	
 									</div>
-									<span class=" price-in1"> $ 29.00</span>
-								</div>	
-								<div class="clearfix"> </div>
-							</div>
-							<div class="recent-grids">
-								<div class="recent-left">
-									<a href="single.html"><img class="img-responsive " src="sourch/images/r1.jpg" alt=""></a>	
+									<div class="recent-right">
+										<h6 class="best2"><a href="{{route('chi-tiet-san-pham',$sp->id)}}">{{$sp->name}} </a></h6>
+										<div class="block">
+											<div class="starbox small ghosting"> </div>
+										</div>
+										@if($sanpham->promotion == 0)
+										Gía: <span class=" price-in1"> {{$sanpham->unit_price}}</span>							
+										@else
+										Gía:<span class=" price-in1"> {{$sanpham->promotion_price}}</span>
+												
+										@endif
+									</div>	
+								
+									<div class="clearfix"> </div>
 								</div>
-								<div class="recent-right">
-									<h6 class="best2"><a href="single.html">Duis aute irure </a></h6>
-									<div class="block">
-										<div class="starbox small ghosting"> </div>
-									</div>
-									<span class=" price-in1"> $ 19.00</span>
-								</div>	
-								<div class="clearfix"> </div>
-							</div>
-							<div class="recent-grids">
-								<div class="recent-left">
-									<a href="single.html"><img class="img-responsive " src="sourch/images/r2.jpg" alt=""></a>	
-								</div>
-								<div class="recent-right">
-									<h6 class="best2"><a href="single.html">Lorem ipsum dolor </a></h6>
-									<div class="block">
-										<div class="starbox small ghosting"> </div>
-									</div>
-									<span class=" price-in1"> $ 19.00</span>
-								</div>
-								<div class="clearfix"> </div>
-							</div>
-							<div class="recent-grids">
-								<div class="recent-left">
-									<a href="single.html"><img class="img-responsive " src="sourch/images/r3.jpg" alt=""></a>	
-								</div>
-								<div class="recent-right">
-									<h6 class="best2"><a href="single.html">Ut enim ad minim </a></h6>
-									<div class="block">
-										<div class="starbox small ghosting"> </div>
-									</div> 
-									<span class=" price-in1">$ 45.00</span>
-								</div>	
-								<div class="clearfix"> </div>
-							</div>
+							@endforeach	
+							<div class="recent-grids">{{$sp_tuongtu->links()}}</div>
 						</div>
+
 						<div class="clearfix"> </div>
 					</div>
 					<!--Product Description-->
@@ -144,15 +116,15 @@
 			
 			<div class="new-arrivals-w3agile">
 					<div class="container">
-						<h3 class="tittle1">Sản Phẩm Tương Tự</h3>
+						<h3 class="tittle1">Sản Phẩm khác</h3>
 						
 						<div class="arrivals-grids">
-						@foreach($sp_tuongtu as $sp)
+							@foreach($sanphamkhac as $sp)
 							<div class="col-md-3 arrival-grid simpleCart_shelfItem">
 								<div class="grid-arr">
 									<div  class="grid-arrival">
 										<figure>		
-											<a href="{{route('loai-san-pham',$sp->id)}}">
+											<a href="{{route('chi-tiet-san-pham',$sp->id)}}">
 												<div class="grid-img">
 													<img  src="sourch/image/product/{{$sp->image}}" class="img-responsive" alt="">
 												</div>
@@ -172,15 +144,16 @@
 										<div class="starbox small ghosting"> </div>
 									</div>
 									<div class="women">
-										<h6><a href="single.html">{{$sp->name}}</a></h6>
+										<h6><a href="{{route('chi-tiet-san-pham',$sp->id)}}">{{$sp->name}}</a></h6>
 										<p ><del>$100.00</del><em class="item_price">$70.00</em></p>
 										<a href="{{route('them-vao-gio-hang',$sp->id)}}" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
 									</div>
 								</div>
 							</div>
-						@endforeach
+							@endforeach						
 							<div class="clearfix"></div>
 						</div>
+						<div class="arrivals-grids">{{$sanphamkhac->links()}}</div>
 						
 					</div>
 			</div>

@@ -36,12 +36,13 @@ class giaodiencontroller extends Controller
     public function getchitietsanpham(Request $rep)
     {
         $sanpham = Product::where('id',$rep->id)->first();
-        $sp_tuongtu = Product::where('id_type',$sanpham->id_type)->get();
-        return view('page.chitietsanpham',compact('sanpham','sp_tuongtu'));
+        $sp_tuongtu = Product::where('id_type',$sanpham->id_type)->paginate(3);
+        $sanphamkhac = Product::where('id_type','<>','$sp_tuongtu->id_type')->paginate(4);
+        return view('page.chitietsanpham',compact('sanpham','sp_tuongtu','sanphamkhac'));
     }
-    public function getlienhesanpham()
+    public function getlienhe()
     {
-        return view('page.lienhe');
+        return view('page.mail');
     }
     public function getdangnhap()
     {

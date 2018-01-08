@@ -1,12 +1,11 @@
-
 @extends('admin.layout.index')
 @section('content')
 <div id="page-wrapper">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">Sản Phẩm
-                            <small>{{$sanpham->name}}</small>
+                        <h1 class="page-header">{{$sanpham->name}}
+                            <small>Sửa</small>
                         </h1>
                     </div>
                     <!-- /.col-lg-12 -->
@@ -24,37 +23,35 @@
                                 {{session('thongbao')}}
                             </div>
                         @endif
-                        <form action="admin/sanpham/sua/{{$sanpham->id}}" method="POST" enctype="multipart/form-data">
+                        <form action="admin/sanpham/them" method="POST" enctype="multipart/form-data">
                         <input name="_token" type="hidden" value="{{ csrf_token() }}"/>
 
                             <div class="form-group">
                                 <label>Tên Sản Phẩm</label>
-                                <input class="form-control" name="name" placeholder="Nhập tên sản phẩm" />
+                                <input class="form-control" name="name" value="{{$sanpham->name}}" placeholder="Nhập tên sản phẩm" />
                             </div>
 
                             <div class="form-group">
                                 <label>Loại Sản Phẩm</label>
                                 <select class="form-control" name="loaisanpham" id="loaisanpham" >
                                 @foreach($loaisanpham as $sp)
-                                    @if($sanpham -> producttype ->id == $sp->id )
-                                    <option value="{{$sp->id}}">{{$sp->name}}</option>
-                                    @endif
-                                @endforeach
+                                     <option value="{{$sp->id}}">{{$sp->name}}</option>
+                                 @endforeach
                                 </select>
                             </div>
                             
                             <div class="form-group">
                                 <label>Miêu tả</label>
-                                <textarea id="demo" name="description" class="form-control ckeditor" rows="3"></textarea>
+                                <textarea id="demo" name="description"  class="form-control " rows="5">{{$sanpham->description}}</textarea>
                             </div>
 
                             <div class="form-group">
                                 <label>Gía gốc</label>
-                                <input class="form-control" name="unit_price" placeholder="Nhập giá gốc sản phẩm" />
+                                <input class="form-control" name="unit_price" value="{{$sanpham->unit_price}}" placeholder="Nhập giá gốc sản phẩm" />
                             </div>
                             <div class="form-group">
                                 <label>Gía khuyến mãi</label>
-                                <input class="form-control" name="promotion_price" placeholder="Nhập giá khuyến mãi san phẩm " />
+                                <input class="form-control" name="promotion_price" value="{{$sanpham->unit_price}}" placeholder="Nhập giá khuyến mãi san phẩm " />
                             </div>
                            
                             <div class="form-group"> 
